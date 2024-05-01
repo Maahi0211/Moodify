@@ -230,7 +230,7 @@ class LibraryArtistWidget extends StatelessWidget {
               : Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
-                    "libArtists".tr,
+                    "Mood".tr,
                     style: Theme.of(context).textTheme.titleLarge,
                   ),
                 ),

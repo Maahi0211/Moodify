@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/ui/player/player_controller.dart';
+import 'package:moodify/ui/player/player_controller.dart';
 
 import 'image_widget.dart';
 import 'marqwee_widget.dart';

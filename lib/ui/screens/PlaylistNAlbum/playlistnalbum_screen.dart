@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/services/downloader.dart';
+import 'package:moodify/services/downloader.dart';
 
 import '../../widgets/loader.dart';
 import '../../widgets/modification_list.dart';
@@ -594,7 +594,8 @@ class PlaylistNAlbumScreen extends StatelessWidget {
                                         "${playListNAlbumScreenController.songList.length}",
                                     itemIcon: Icons.music_note_rounded,
                                     titleLeftPadding: 9,
-                                    requiredSortTypes: buildSortTypeSet(false, true),
+                                    requiredSortTypes:
+                                        buildSortTypeSet(false, true),
                                     isPlaylistRearrageFeatureRequired:
                                         content.playlistId != "LIBRP" &&
                                             content.playlistId !=
@@ -644,7 +645,8 @@ class PlaylistNAlbumScreen extends StatelessWidget {
                                     "${playListNAlbumScreenController.songList.length}",
                                 itemIcon: Icons.music_note_rounded,
                                 titleLeftPadding: 9,
-                                requiredSortTypes: buildSortTypeSet(false, true),
+                                requiredSortTypes:
+                                    buildSortTypeSet(false, true),
                                 onSort: (type, ascending) {
                                   playListNAlbumScreenController.onSort(
                                       type, ascending);

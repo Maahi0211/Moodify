@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter_lyric/lyric_ui/ui_netease.dart';
-import 'package:harmonymusic/services/synced_lyrics_service.dart';
-import 'package:harmonymusic/ui/screens/Settings/settings_screen_controller.dart';
+import 'package:moodify/services/synced_lyrics_service.dart';
+import 'package:moodify/ui/screens/Settings/settings_screen_controller.dart';
 import 'package:hive/hive.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';

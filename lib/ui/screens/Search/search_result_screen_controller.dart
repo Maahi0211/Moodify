@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/ui/screens/Settings/settings_screen_controller.dart';
+import 'package:moodify/ui/screens/Settings/settings_screen_controller.dart';
 
 import '../../../utils/helper.dart';
 import '../Home/home_screen_controller.dart';
@@ -145,8 +145,7 @@ class SearchResultScreenController extends GetxController
   void onSort(SortType sortType, bool isAscending, String title) {
     if (title == "Songs" || title == "Videos") {
       final songList = separatedResultContent[title].toList();
-      sortSongsNVideos(
-          songList, sortType, isAscending);
+      sortSongsNVideos(songList, sortType, isAscending);
       separatedResultContent[title] = songList;
     } else if (title.contains('playlists')) {
       final playlists = separatedResultContent[title].toList();

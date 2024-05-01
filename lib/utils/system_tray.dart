@@ -2,11 +2,10 @@ import 'dart:io';
 
 import 'package:audio_service/audio_service.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/ui/player/player_controller.dart';
-import 'package:harmonymusic/ui/screens/Settings/settings_screen_controller.dart';
+import 'package:moodify/ui/player/player_controller.dart';
+import 'package:moodify/ui/screens/Settings/settings_screen_controller.dart';
 import 'package:system_tray/system_tray.dart';
 import 'package:window_manager/window_manager.dart';
-
 
 class DesktopSystemTray extends GetxService {
   late WindowListener listener;

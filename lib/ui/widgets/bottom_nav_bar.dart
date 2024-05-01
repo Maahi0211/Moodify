@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/ui/screens/Home/home_screen_controller.dart';
+import 'package:moodify/ui/screens/Home/home_screen_controller.dart';
 
 class BottomNavBar extends StatelessWidget {
   const BottomNavBar({super.key});
@@ -35,9 +35,9 @@ class BottomNavBar extends StatelessWidget {
             ]));
   }
 
-  String modifyNgetlabel(String label){
-    if(label.length>9){
-      return "${label.substring(0,8)}..";
+  String modifyNgetlabel(String label) {
+    if (label.length > 9) {
+      return "${label.substring(0, 8)}..";
     }
     return label;
   }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/ui/screens/Settings/settings_screen_controller.dart';
+import 'package:moodify/ui/screens/Settings/settings_screen_controller.dart';
 
 import '/ui/navigator.dart';
 import 'search_screen_controller.dart';
@@ -72,7 +72,8 @@ class SearchScreen extends StatelessWidget {
                             id: ScreenNavigationSetup.id, arguments: val);
                         searchScreenController.addToHistryQueryList(val);
                       },
-                      autofocus: settingsScreenController.isBottomNavBarEnabled.isFalse,
+                      autofocus: settingsScreenController
+                          .isBottomNavBarEnabled.isFalse,
                       cursorColor: Theme.of(context).textTheme.bodySmall!.color,
                       decoration: InputDecoration(
                           contentPadding: const EdgeInsets.only(left: 5),
@@ -95,7 +96,7 @@ class SearchScreen extends StatelessWidget {
                             ? searchScreenController.historyQuerylist.toList()
                             : searchScreenController.suggestionList.toList();
                         return ListView.builder(
-                          padding: const EdgeInsets.only(top: 5,bottom: 400),
+                          padding: const EdgeInsets.only(top: 5, bottom: 400),
                           physics: const BouncingScrollPhysics(
                               parent: AlwaysScrollableScrollPhysics()),
                           itemCount: list.length,

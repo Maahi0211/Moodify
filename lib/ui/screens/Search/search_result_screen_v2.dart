@@ -1,8 +1,8 @@
 import 'package:buttons_tabbar/buttons_tabbar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/ui/widgets/loader.dart';
-import 'package:harmonymusic/ui/widgets/search_related_widgets.dart';
+import 'package:moodify/ui/widgets/loader.dart';
+import 'package:moodify/ui/widgets/search_related_widgets.dart';
 
 import '../../navigator.dart';
 import '../../widgets/separate_tab_item_widget.dart';
@@ -90,9 +90,12 @@ class SearchResultScreenBN extends StatelessWidget {
                               controller: searchResScrController.tabController,
                               contentPadding:
                                   const EdgeInsets.only(left: 15, right: 15),
-                              backgroundColor:
-                                  Theme.of(context).textTheme.titleMedium?.color!,
-                              unselectedBackgroundColor:  Theme.of(context).colorScheme.secondary,
+                              backgroundColor: Theme.of(context)
+                                  .textTheme
+                                  .titleMedium
+                                  ?.color!,
+                              unselectedBackgroundColor:
+                                  Theme.of(context).colorScheme.secondary,
                               borderWidth: 0,
                               buttonMargin: const EdgeInsets.only(
                                   right: 10, left: 4, top: 4, bottom: 4),

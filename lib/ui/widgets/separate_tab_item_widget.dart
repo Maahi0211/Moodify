@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/ui/widgets/modification_list.dart';
+import 'package:moodify/ui/widgets/modification_list.dart';
 
 import '../screens/Artists/artist_screen_controller.dart';
 import '../screens/Search/search_result_screen_controller.dart';
@@ -74,7 +74,9 @@ class SeparateTabItemWidget extends StatelessWidget {
                     titleLeftPadding: 9,
                     itemCountTitle:
                         "${isResultWidget ? (searchResController?.separatedResultContent[title] ?? []).length : (artistController?.sepataredContent[title] != null ? artistController?.sepataredContent[title]['results'] : []).length} ${"items".tr}",
-                    requiredSortTypes: buildSortTypeSet(title == 'Albums' || title == "Singles", title == "Songs" || title == "Videos"),
+                    requiredSortTypes: buildSortTypeSet(
+                        title == 'Albums' || title == "Singles",
+                        title == "Songs" || title == "Videos"),
                     onSort: (type, ascending) {
                       isResultWidget
                           ? searchResController!.onSort(type, ascending, title)
