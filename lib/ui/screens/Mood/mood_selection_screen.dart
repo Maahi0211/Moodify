@@ -89,7 +89,7 @@ class MoodButton extends StatelessWidget {
         width: double.infinity,
         padding: EdgeInsets.all(20),
         decoration: BoxDecoration(
-          color: Colors.grey[200],
+          color: Color.fromARGB(255, 116, 116, 116),
           borderRadius: BorderRadius.circular(10),
         ),
         child: Center(
