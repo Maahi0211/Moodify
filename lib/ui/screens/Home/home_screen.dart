@@ -15,6 +15,7 @@ import '../../widgets/quickpickswidget.dart';
 import '../../widgets/shimmer_widgets/home_shimmer.dart';
 import 'home_screen_controller.dart';
 import '../Settings/settings_screen.dart';
+import '../Mood/mood_selection_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -198,6 +199,8 @@ class Body extends StatelessWidget {
     } else if (homeScreenController.tabIndex.value == 4) {
       return const LibraryArtistWidget();
     } else if (homeScreenController.tabIndex.value == 5) {
+      return MoodSelectionScreen();
+    } else if (homeScreenController.tabIndex.value == 6) {
       return const SettingsScreen();
     } else {
       return Center(

@@ -4,7 +4,7 @@ import 'package:moodify/ui/screens/Home/home_screen_controller.dart';
 import 'package:sidebar_with_animation/animated_side_bar.dart';
 
 class SideNavBar extends StatelessWidget {
-  const SideNavBar({super.key});
+  const SideNavBar({Key? key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +20,7 @@ class SideNavBar extends StatelessWidget {
                 child: Obx(
                   () => NavigationRail(
                     useIndicator: !isMobileOrTabScreen,
-                    selectedIndex:
-                        homeScreenController.tabIndex.value, //_selectedIndex,
+                    selectedIndex: homeScreenController.tabIndex.value,
                     onDestinationSelected:
                         homeScreenController.onSideBarTabSelected,
                     minWidth: 60,
@@ -31,7 +30,6 @@ class SideNavBar extends StatelessWidget {
                     labelType: isMobileOrTabScreen
                         ? NavigationRailLabelType.all
                         : NavigationRailLabelType.none,
-                    //backgroundColor: Colors.green,
                     destinations: <NavigationRailDestination>[
                       railDestination(
                           "home".tr, isMobileOrTabScreen, Icons.home),
@@ -42,18 +40,20 @@ class SideNavBar extends StatelessWidget {
                       railDestination(
                           "albums".tr, isMobileOrTabScreen, Icons.album),
                       railDestination(
-                          "Mood".tr, isMobileOrTabScreen, Icons.people),
-                      //railDestination("Settings")
+                          "Library".tr, isMobileOrTabScreen, Icons.people),
+                      railDestination("Mood", isMobileOrTabScreen,
+                          Icons.mood), // Added Mood item
                       const NavigationRailDestination(
                         padding: EdgeInsets.only(top: 10, bottom: 10),
                         icon: Icon(Icons.settings_rounded),
                         label: SizedBox.shrink(),
                         selectedIcon: Icon(Icons.settings_rounded),
-                      )
+                      ),
                     ],
                   ),
                 ),
-              ))
+              ),
+            )
           : Padding(
               padding: const EdgeInsets.only(bottom: 100.0),
               child: SideBarAnimated(
@@ -93,6 +93,10 @@ class SideNavBar extends StatelessWidget {
                     text: 'artists'.tr,
                   ),
                   SideBarItem(
+                    iconSelected: Icons.mood, // Changed the icon to mood
+                    text: 'Mood', // Changed the text to Mood
+                  ),
+                  SideBarItem(
                     iconSelected: Icons.settings,
                     iconUnselected: Icons.settings_outlined,
                     text: 'settings'.tr,
@@ -109,10 +113,11 @@ class SideNavBar extends StatelessWidget {
         ? NavigationRailDestination(
             icon: const SizedBox.shrink(),
             label: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 5),
-                child: isMobileOrTabScreen
-                    ? RotatedBox(quarterTurns: -1, child: Text(label))
-                    : Text(label)),
+              padding: const EdgeInsets.symmetric(vertical: 5),
+              child: isMobileOrTabScreen
+                  ? RotatedBox(quarterTurns: -1, child: Text(label))
+                  : Text(label),
+            ),
           )
         : NavigationRailDestination(
             icon: Icon(icon),
@@ -120,6 +125,7 @@ class SideNavBar extends StatelessWidget {
             padding: const EdgeInsets.only(left: 10),
             indicatorShape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(10))),
-            indicatorColor: Colors.amber);
+            indicatorColor: Colors.amber,
+          );
   }
 }
