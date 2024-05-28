@@ -198,7 +198,7 @@ class Downloader extends GetxService {
                           .load(imageUrl))
                       .buffer
                       .asUint8List(),
-                  mimeType: MimeType.none,
+                //  mimeType: MimeType.none,
                   pictureType: PictureType.coverFront)
             ]);
 

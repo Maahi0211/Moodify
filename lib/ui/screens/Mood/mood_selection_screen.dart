@@ -9,9 +9,9 @@ class MoodSelectionScreen extends StatelessWidget {
         children: [
           Expanded(
             child: Container(
-              padding: EdgeInsets.all(20),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
+              padding: const EdgeInsets.all(20),
+              child:const Column(
+              mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
                     'How are you feeling?',
@@ -89,7 +89,7 @@ class MoodButton extends StatelessWidget {
         width: double.infinity,
         padding: EdgeInsets.all(20),
         decoration: BoxDecoration(
-          color: Color.fromARGB(255, 116, 116, 116),
+          color: Color.fromARGB(255, 226, 218, 218),
           borderRadius: BorderRadius.circular(10),
         ),
         child: Center(

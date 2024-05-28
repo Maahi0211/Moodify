@@ -4,6 +4,7 @@
 
 list(APPEND FLUTTER_PLUGIN_LIST
   audiotags
+  gtk
   media_kit_libs_linux
   screen_retriever
   system_tray
